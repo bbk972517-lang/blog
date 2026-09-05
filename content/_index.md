@@ -11,7 +11,7 @@ blocks:
       和那些值得慢慢说的故事。
     button: 翻开我的笔记
     url: /posts/
-    image: /images/landscape.svg
+    image: /blog/images/landscape.svg
   - type: cards
     title: 在这里，随心漫游
     text: 给不同的兴趣，留一个自己的角落。

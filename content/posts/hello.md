@@ -3,7 +3,7 @@ title: 给自己留一块自由生长的地方
 slug: hello
 date: 2026-09-01T10:00:00+08:00
 description: 不用急着决定这里是什么，先写下第一段话。
-cover: /images/landscape.svg
+cover: /blog/images/landscape.svg
 tags: [生活]
 draft: false
 ---
@@ -20,4 +20,3 @@ draft: false
 > 一个属于自己的空间，可以慢慢生长。
 
 在后台的文章编辑器中，可以直接插入标题、图片、引用与列表。发布后，网站会自动重新生成。
-
