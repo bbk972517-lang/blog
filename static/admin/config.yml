@@ -1,0 +1,995 @@
+{
+  "backend": {
+    "name": "github",
+    "repo": "bbk972517-lang/blog",
+    "branch": "main",
+    "base_url": "https://api.netlify.com",
+    "auth_endpoint": "auth",
+    "site_domain": "YOUR-NETLIFY-SITE.netlify.app",
+    "auth_scope": "public_repo"
+  },
+  "local_backend": {
+    "url": "http://localhost:8081/api/v1"
+  },
+  "locale": "zh_Hans",
+  "media_folder": "static/images/uploads",
+  "public_folder": "/blog/images/uploads",
+  "site_url": "https://bbk972517-lang.github.io/blog",
+  "display_url": "https://bbk972517-lang.github.io/blog",
+  "logo_url": "../images/favicon.svg",
+  "show_preview_links": false,
+  "slug": {
+    "encoding": "ascii",
+    "clean_accents": true,
+    "sanitize_replacement": "-"
+  },
+  "collections": [
+    {
+      "name": "home",
+      "label": "首页布局",
+      "files": [
+        {
+          "name": "home",
+          "label": "首页",
+          "file": "content/_index.md",
+          "fields": [
+            {
+              "label": "页面名称",
+              "name": "title",
+              "widget": "string",
+              "default": "首页"
+            },
+            {
+              "label": "页面模块（添加后拖动排序）",
+              "name": "blocks",
+              "widget": "list",
+              "types": [
+                {
+                  "label": "首屏介绍",
+                  "name": "hero",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "label": "显示这个模块",
+                      "name": "enabled",
+                      "widget": "boolean",
+                      "default": true,
+                      "required": false
+                    },
+                    {
+                      "label": "大标题（可换行）",
+                      "name": "title",
+                      "widget": "text"
+                    },
+                    {
+                      "label": "顶部小字",
+                      "name": "eyebrow",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "简介",
+                      "name": "text",
+                      "widget": "text"
+                    },
+                    {
+                      "label": "插画或照片",
+                      "name": "image",
+                      "widget": "image",
+                      "required": false
+                    },
+                    {
+                      "label": "按钮文字",
+                      "name": "button",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "链接地址",
+                      "name": "url",
+                      "widget": "string",
+                      "hint": "站内填写 /about/ 或 /posts/；站外填写完整 https:// 地址。",
+                      "pattern": [
+                        "^(https://|/)[^\\s]*$",
+                        "请填写 / 开头的站内路径或 https:// 链接"
+                      ],
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "label": "文字 / 标题 / 列表",
+                  "name": "text",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "label": "显示这个模块",
+                      "name": "enabled",
+                      "widget": "boolean",
+                      "default": true,
+                      "required": false
+                    },
+                    {
+                      "label": "模块标题",
+                      "name": "title",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "正文",
+                      "name": "body",
+                      "widget": "markdown"
+                    }
+                  ]
+                },
+                {
+                  "label": "单张大图",
+                  "name": "image",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "label": "显示这个模块",
+                      "name": "enabled",
+                      "widget": "boolean",
+                      "default": true,
+                      "required": false
+                    },
+                    {
+                      "label": "模块标题",
+                      "name": "title",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "图片",
+                      "name": "image",
+                      "widget": "image"
+                    },
+                    {
+                      "label": "图片描述（无障碍）",
+                      "name": "alt",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "图片说明",
+                      "name": "caption",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "label": "链接卡片",
+                  "name": "cards",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "label": "显示这个模块",
+                      "name": "enabled",
+                      "widget": "boolean",
+                      "default": true,
+                      "required": false
+                    },
+                    {
+                      "label": "模块标题",
+                      "name": "title",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "简短说明",
+                      "name": "text",
+                      "widget": "text",
+                      "required": false
+                    },
+                    {
+                      "label": "桌面列数",
+                      "name": "columns",
+                      "widget": "select",
+                      "options": [
+                        "2",
+                        "3"
+                      ],
+                      "default": "3"
+                    },
+                    {
+                      "label": "卡片（可排序）",
+                      "name": "items",
+                      "widget": "list",
+                      "summary": "{{fields.title}}",
+                      "fields": [
+                        {
+                          "label": "卡片标题",
+                          "name": "title",
+                          "widget": "string"
+                        },
+                        {
+                          "label": "卡片描述",
+                          "name": "text",
+                          "widget": "text"
+                        },
+                        {
+                          "label": "链接地址",
+                          "name": "url",
+                          "widget": "string",
+                          "hint": "站内填写 /about/ 或 /posts/；站外填写完整 https:// 地址。",
+                          "pattern": [
+                            "^(https://|/)[^\\s]*$",
+                            "请填写 / 开头的站内路径或 https:// 链接"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "图片画廊",
+                  "name": "gallery",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "label": "显示这个模块",
+                      "name": "enabled",
+                      "widget": "boolean",
+                      "default": true,
+                      "required": false
+                    },
+                    {
+                      "label": "模块标题",
+                      "name": "title",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "桌面列数",
+                      "name": "columns",
+                      "widget": "select",
+                      "options": [
+                        "2",
+                        "3"
+                      ],
+                      "default": "2"
+                    },
+                    {
+                      "label": "图片（可排序）",
+                      "name": "items",
+                      "widget": "list",
+                      "fields": [
+                        {
+                          "label": "图片",
+                          "name": "image",
+                          "widget": "image"
+                        },
+                        {
+                          "label": "说明",
+                          "name": "caption",
+                          "widget": "string"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "最新文章",
+                  "name": "posts",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "label": "显示这个模块",
+                      "name": "enabled",
+                      "widget": "boolean",
+                      "default": true,
+                      "required": false
+                    },
+                    {
+                      "label": "模块标题",
+                      "name": "title",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "说明",
+                      "name": "text",
+                      "widget": "text",
+                      "required": false
+                    },
+                    {
+                      "label": "显示篇数",
+                      "name": "count",
+                      "widget": "number",
+                      "value_type": "int",
+                      "min": 1,
+                      "max": 24,
+                      "default": 6
+                    }
+                  ]
+                },
+                {
+                  "label": "醒目提示 / 行动按钮",
+                  "name": "callout",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "label": "显示这个模块",
+                      "name": "enabled",
+                      "widget": "boolean",
+                      "default": true,
+                      "required": false
+                    },
+                    {
+                      "label": "模块标题",
+                      "name": "title",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "说明",
+                      "name": "text",
+                      "widget": "text"
+                    },
+                    {
+                      "label": "按钮文字",
+                      "name": "button",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "链接地址",
+                      "name": "url",
+                      "widget": "string",
+                      "hint": "站内填写 /about/ 或 /posts/；站外填写完整 https:// 地址。",
+                      "pattern": [
+                        "^(https://|/)[^\\s]*$",
+                        "请填写 / 开头的站内路径或 https:// 链接"
+                      ],
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "label": "视频播放器",
+                  "name": "video",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "label": "显示这个模块",
+                      "name": "enabled",
+                      "widget": "boolean",
+                      "default": true,
+                      "required": false
+                    },
+                    {
+                      "label": "模块标题",
+                      "name": "title",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "链接地址",
+                      "name": "url",
+                      "widget": "string",
+                      "hint": "请填写 HTTPS 的 MP4 / WebM 视频文件直链（不是视频网页链接）。大视频不建议存入 GitHub。",
+                      "pattern": [
+                        "^(https://|/)[^\\s]*$",
+                        "请填写 / 开头的站内路径或 https:// 链接"
+                      ]
+                    },
+                    {
+                      "label": "封面",
+                      "name": "poster",
+                      "widget": "image",
+                      "required": false
+                    },
+                    {
+                      "label": "说明",
+                      "name": "caption",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "label": "留白间隔",
+                  "name": "spacer",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "label": "显示这个模块",
+                      "name": "enabled",
+                      "widget": "boolean",
+                      "default": true,
+                      "required": false
+                    },
+                    {
+                      "label": "间距",
+                      "name": "size",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "小",
+                          "value": "small"
+                        },
+                        {
+                          "label": "大",
+                          "value": "large"
+                        }
+                      ],
+                      "default": "small"
+                    }
+                  ]
+                }
+              ],
+              "summary": "{{fields.title}} · {{fields.type}}",
+              "collapsed": true,
+              "hint": "可以自由添加、删除、排序；关闭「显示这个模块」可临时隐藏。预览为布局近似效果，最终以网站为准。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages",
+      "label": "个性化页面",
+      "label_singular": "页面",
+      "folder": "content/pages",
+      "create": true,
+      "slug": "{{slug}}",
+      "fields": [
+        {
+          "label": "页面标题",
+          "name": "title",
+          "widget": "string"
+        },
+        {
+          "label": "网址短名",
+          "name": "slug",
+          "widget": "string",
+          "hint": "只用小写英文、数字和短横线，例如 travel。不要使用 admin、posts、tags、images、css、pages。",
+          "pattern": [
+            "^(?!(?:admin|posts|tags|images|css|pages)$)[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "请输入不与系统路径冲突的英文短名"
+          ]
+        },
+        {
+          "label": "简介",
+          "name": "description",
+          "widget": "text",
+          "required": false
+        },
+        {
+          "label": "页面模块（添加后拖动排序）",
+          "name": "blocks",
+          "widget": "list",
+          "types": [
+            {
+              "label": "首屏介绍",
+              "name": "hero",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "显示这个模块",
+                  "name": "enabled",
+                  "widget": "boolean",
+                  "default": true,
+                  "required": false
+                },
+                {
+                  "label": "大标题（可换行）",
+                  "name": "title",
+                  "widget": "text"
+                },
+                {
+                  "label": "顶部小字",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "简介",
+                  "name": "text",
+                  "widget": "text"
+                },
+                {
+                  "label": "插画或照片",
+                  "name": "image",
+                  "widget": "image",
+                  "required": false
+                },
+                {
+                  "label": "按钮文字",
+                  "name": "button",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "链接地址",
+                  "name": "url",
+                  "widget": "string",
+                  "hint": "站内填写 /about/ 或 /posts/；站外填写完整 https:// 地址。",
+                  "pattern": [
+                    "^(https://|/)[^\\s]*$",
+                    "请填写 / 开头的站内路径或 https:// 链接"
+                  ],
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "文字 / 标题 / 列表",
+              "name": "text",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "显示这个模块",
+                  "name": "enabled",
+                  "widget": "boolean",
+                  "default": true,
+                  "required": false
+                },
+                {
+                  "label": "模块标题",
+                  "name": "title",
+                  "widget": "string"
+                },
+                {
+                  "label": "正文",
+                  "name": "body",
+                  "widget": "markdown"
+                }
+              ]
+            },
+            {
+              "label": "单张大图",
+              "name": "image",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "显示这个模块",
+                  "name": "enabled",
+                  "widget": "boolean",
+                  "default": true,
+                  "required": false
+                },
+                {
+                  "label": "模块标题",
+                  "name": "title",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "图片",
+                  "name": "image",
+                  "widget": "image"
+                },
+                {
+                  "label": "图片描述（无障碍）",
+                  "name": "alt",
+                  "widget": "string"
+                },
+                {
+                  "label": "图片说明",
+                  "name": "caption",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "链接卡片",
+              "name": "cards",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "显示这个模块",
+                  "name": "enabled",
+                  "widget": "boolean",
+                  "default": true,
+                  "required": false
+                },
+                {
+                  "label": "模块标题",
+                  "name": "title",
+                  "widget": "string"
+                },
+                {
+                  "label": "简短说明",
+                  "name": "text",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "桌面列数",
+                  "name": "columns",
+                  "widget": "select",
+                  "options": [
+                    "2",
+                    "3"
+                  ],
+                  "default": "3"
+                },
+                {
+                  "label": "卡片（可排序）",
+                  "name": "items",
+                  "widget": "list",
+                  "summary": "{{fields.title}}",
+                  "fields": [
+                    {
+                      "label": "卡片标题",
+                      "name": "title",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "卡片描述",
+                      "name": "text",
+                      "widget": "text"
+                    },
+                    {
+                      "label": "链接地址",
+                      "name": "url",
+                      "widget": "string",
+                      "hint": "站内填写 /about/ 或 /posts/；站外填写完整 https:// 地址。",
+                      "pattern": [
+                        "^(https://|/)[^\\s]*$",
+                        "请填写 / 开头的站内路径或 https:// 链接"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "图片画廊",
+              "name": "gallery",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "显示这个模块",
+                  "name": "enabled",
+                  "widget": "boolean",
+                  "default": true,
+                  "required": false
+                },
+                {
+                  "label": "模块标题",
+                  "name": "title",
+                  "widget": "string"
+                },
+                {
+                  "label": "桌面列数",
+                  "name": "columns",
+                  "widget": "select",
+                  "options": [
+                    "2",
+                    "3"
+                  ],
+                  "default": "2"
+                },
+                {
+                  "label": "图片（可排序）",
+                  "name": "items",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "label": "图片",
+                      "name": "image",
+                      "widget": "image"
+                    },
+                    {
+                      "label": "说明",
+                      "name": "caption",
+                      "widget": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "最新文章",
+              "name": "posts",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "显示这个模块",
+                  "name": "enabled",
+                  "widget": "boolean",
+                  "default": true,
+                  "required": false
+                },
+                {
+                  "label": "模块标题",
+                  "name": "title",
+                  "widget": "string"
+                },
+                {
+                  "label": "说明",
+                  "name": "text",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "显示篇数",
+                  "name": "count",
+                  "widget": "number",
+                  "value_type": "int",
+                  "min": 1,
+                  "max": 24,
+                  "default": 6
+                }
+              ]
+            },
+            {
+              "label": "醒目提示 / 行动按钮",
+              "name": "callout",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "显示这个模块",
+                  "name": "enabled",
+                  "widget": "boolean",
+                  "default": true,
+                  "required": false
+                },
+                {
+                  "label": "模块标题",
+                  "name": "title",
+                  "widget": "string"
+                },
+                {
+                  "label": "说明",
+                  "name": "text",
+                  "widget": "text"
+                },
+                {
+                  "label": "按钮文字",
+                  "name": "button",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "链接地址",
+                  "name": "url",
+                  "widget": "string",
+                  "hint": "站内填写 /about/ 或 /posts/；站外填写完整 https:// 地址。",
+                  "pattern": [
+                    "^(https://|/)[^\\s]*$",
+                    "请填写 / 开头的站内路径或 https:// 链接"
+                  ],
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "视频播放器",
+              "name": "video",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "显示这个模块",
+                  "name": "enabled",
+                  "widget": "boolean",
+                  "default": true,
+                  "required": false
+                },
+                {
+                  "label": "模块标题",
+                  "name": "title",
+                  "widget": "string"
+                },
+                {
+                  "label": "链接地址",
+                  "name": "url",
+                  "widget": "string",
+                  "hint": "请填写 HTTPS 的 MP4 / WebM 视频文件直链（不是视频网页链接）。大视频不建议存入 GitHub。",
+                  "pattern": [
+                    "^(https://|/)[^\\s]*$",
+                    "请填写 / 开头的站内路径或 https:// 链接"
+                  ]
+                },
+                {
+                  "label": "封面",
+                  "name": "poster",
+                  "widget": "image",
+                  "required": false
+                },
+                {
+                  "label": "说明",
+                  "name": "caption",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "留白间隔",
+              "name": "spacer",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "显示这个模块",
+                  "name": "enabled",
+                  "widget": "boolean",
+                  "default": true,
+                  "required": false
+                },
+                {
+                  "label": "间距",
+                  "name": "size",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "小",
+                      "value": "small"
+                    },
+                    {
+                      "label": "大",
+                      "value": "large"
+                    }
+                  ],
+                  "default": "small"
+                }
+              ]
+            }
+          ],
+          "summary": "{{fields.title}} · {{fields.type}}",
+          "collapsed": true,
+          "hint": "可以自由添加、删除、排序；关闭「显示这个模块」可临时隐藏。预览为布局近似效果，最终以网站为准。"
+        }
+      ]
+    },
+    {
+      "name": "posts",
+      "label": "文章",
+      "label_singular": "文章",
+      "folder": "content/posts",
+      "create": true,
+      "slug": "{{slug}}",
+      "sortable_fields": [
+        "date",
+        "title"
+      ],
+      "fields": [
+        {
+          "label": "文章标题",
+          "name": "title",
+          "widget": "string"
+        },
+        {
+          "label": "网址短名",
+          "name": "slug",
+          "widget": "string",
+          "hint": "只用小写英文、数字和短横线，例如 travel。不要使用 admin、posts、tags、images、css、pages。",
+          "pattern": [
+            "^(?!(?:admin|posts|tags|images|css|pages)$)[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "请输入不与系统路径冲突的英文短名"
+          ]
+        },
+        {
+          "label": "发布日期",
+          "name": "date",
+          "widget": "datetime",
+          "format": "YYYY-MM-DDTHH:mm:ssZ"
+        },
+        {
+          "label": "暂不展示（源文件仍公开）",
+          "name": "draft",
+          "widget": "boolean",
+          "default": true,
+          "hint": "公开仓库不适合保存私密日记。关闭此开关后文章才显示在网站上。"
+        },
+        {
+          "label": "摘要",
+          "name": "description",
+          "widget": "text"
+        },
+        {
+          "label": "封面",
+          "name": "cover",
+          "widget": "image",
+          "required": false
+        },
+        {
+          "label": "标签",
+          "name": "tags",
+          "widget": "list",
+          "default": []
+        },
+        {
+          "label": "正文",
+          "name": "body",
+          "widget": "markdown"
+        }
+      ]
+    },
+    {
+      "name": "settings",
+      "label": "网站外观与导航",
+      "files": [
+        {
+          "name": "settings",
+          "label": "基本设置",
+          "file": "data/settings.json",
+          "format": "json",
+          "fields": [
+            {
+              "label": "网站名称",
+              "name": "title",
+              "widget": "string"
+            },
+            {
+              "label": "一句话介绍",
+              "name": "tagline",
+              "widget": "string"
+            },
+            {
+              "label": "搜索引擎简介",
+              "name": "description",
+              "widget": "text"
+            },
+            {
+              "label": "主题色",
+              "name": "accent",
+              "widget": "string",
+              "default": "#315c49",
+              "hint": "填写六位色号，如 #315c49（森林绿）、#74546b（紫）、#305f80（蓝）。",
+              "pattern": [
+                "^#[0-9A-Fa-f]{6}$",
+                "请填写 # 加六位颜色代码"
+              ]
+            },
+            {
+              "label": "背景色",
+              "name": "background",
+              "widget": "string",
+              "default": "#f7f5ef",
+              "pattern": [
+                "^#[0-9A-Fa-f]{6}$",
+                "请填写 # 加六位颜色代码"
+              ]
+            },
+            {
+              "label": "页面宽度",
+              "name": "width",
+              "widget": "select",
+              "options": [
+                {
+                  "label": "标准",
+                  "value": "normal"
+                },
+                {
+                  "label": "宽屏",
+                  "value": "wide"
+                },
+                {
+                  "label": "紧凑",
+                  "value": "narrow"
+                }
+              ],
+              "default": "normal"
+            },
+            {
+              "label": "顶部导航（可排序）",
+              "name": "navigation",
+              "widget": "list",
+              "fields": [
+                {
+                  "label": "菜单文字",
+                  "name": "label",
+                  "widget": "string"
+                },
+                {
+                  "label": "链接地址",
+                  "name": "url",
+                  "widget": "string",
+                  "hint": "站内填写 /about/ 或 /posts/；站外填写完整 https:// 地址。",
+                  "pattern": [
+                    "^(https://|/)[^\\s]*$",
+                    "请填写 / 开头的站内路径或 https:// 链接"
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "页脚文字",
+              "name": "footer",
+              "widget": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

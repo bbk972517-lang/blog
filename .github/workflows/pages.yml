@@ -1,0 +1,49 @@
+name: 发布博客到 GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: 安装固定版本 Hugo
+        env:
+          HUGO_VERSION: "0.165.0"
+        run: |
+          curl --fail --location --retry 3 -o hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.tar.gz"
+          curl --fail --location --retry 3 -o checksums.txt "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_checksums.txt"
+          grep "hugo_${HUGO_VERSION}_linux-amd64.tar.gz" checksums.txt | sed "s/hugo_${HUGO_VERSION}_linux-amd64.tar.gz/hugo.tar.gz/" | sha256sum --check --strict
+          tar -xzf hugo.tar.gz hugo
+          sudo mv hugo /usr/local/bin/hugo
+      - uses: actions/configure-pages@v5
+        id: pages
+      - name: 准备固定版本后台程序
+        run: |
+          mkdir -p static/admin/vendor
+          curl --fail --location --retry 3 -o static/admin/vendor/decap-cms.js https://unpkg.com/decap-cms@3.16.0/dist/decap-cms.js
+          echo 'a5e8564475207ffc6d9d106858890f186dbe6eb392a6c5da854db78ccc00882e  static/admin/vendor/decap-cms.js' | sha256sum --check --strict
+      - name: 生成网站
+        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 上线
+        id: deployment
+        uses: actions/deploy-pages@v4

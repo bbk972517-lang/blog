@@ -1,0 +1,23 @@
+{
+  "title": "拾光",
+  "tagline": "把日子，写成自己的形状。",
+  "description": "一个记录生活、灵感与探索的个人空间。",
+  "accent": "#315c49",
+  "background": "#f7f5ef",
+  "width": "normal",
+  "footer": "慢慢记录，认真生活。",
+  "navigation": [
+    {
+      "label": "首页",
+      "url": "/"
+    },
+    {
+      "label": "文章",
+      "url": "/posts/"
+    },
+    {
+      "label": "关于",
+      "url": "/about/"
+    }
+  ]
+}

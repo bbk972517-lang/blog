@@ -1,0 +1,34 @@
+---
+title: 关于这个小站
+slug: about
+description: 一个属于自己的数字花园。
+blocks:
+  - type: text
+    title: 你好，很高兴在这里遇见你。
+    body: |
+      这是一个示例介绍页。你可以在后台把它换成自己的故事。
+
+      **不必一次写得完美。** 先留下一点痕迹，再慢慢把这里变成喜欢的样子。
+  - type: cards
+    title: 我在做的事
+    columns: "2"
+    items:
+      - title: 记录
+        text: 用文字和图片，保存生活里的小片段。
+        url: /posts/
+      - title: 探索
+        text: 为新的爱好和小项目留出空间。
+        url: /
+  - type: gallery
+    title: 一点视觉灵感
+    columns: "2"
+    items:
+      - image: /images/landscape.svg
+        caption: 山与远方 · 示例插画
+      - image: /images/still-life.svg
+        caption: 桌边时光 · 示例插画
+  - type: callout
+    title: 把这一页变成你自己的。
+    text: 在后台打开「个性化页面」，你可以添加模块、调整顺序，也可以创建新的作品集或旅行页。
+---
+

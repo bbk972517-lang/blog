@@ -1,0 +1,9 @@
+{{- $u := string . -}}
+{{- $result := $u -}}
+{{- if not (or (findRE "^[a-zA-Z][a-zA-Z0-9+.-]*:" $u) (hasPrefix $u "//") (hasPrefix $u "#")) -}}
+{{- $prefix := strings.TrimPrefix "/" (urls.Parse site.BaseURL).Path -}}
+{{- $path := strings.TrimPrefix "/" $u -}}
+{{- if and $prefix (hasPrefix $path $prefix) -}}{{- $path = strings.TrimPrefix $prefix $path -}}{{- end -}}
+{{- $result = relURL $path -}}
+{{- end -}}
+{{- return $result -}}

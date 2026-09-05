@@ -1,0 +1,14 @@
+{{ range .Params.blocks }}{{ if ne .enabled false }}
+<section class="section block-{{ .type }}">
+{{ if eq .type "hero" }}
+<div class="hero-copy"><p class="eyebrow">{{ .eyebrow }}</p><h1>{{ .title }}</h1><p class="lead">{{ .text }}</p>{{ if and .button .url }}<a class="button" href="{{ .url | partial "url.html" }}">{{ .button }} <span>↗</span></a>{{ end }}<p class="hero-note">独立记录 · 自由生长</p></div>{{ with .image }}<figure class="hero-art"><img src="{{ . | partial "url.html" }}" alt="{{ $.Title }}的首页插画"><figcaption>A small place, a world of my own.</figcaption></figure>{{ end }}
+{{ else if eq .type "text" }}<div class="prose"><h2>{{ .title }}</h2>{{ .body | markdownify }}</div>
+{{ else if eq .type "image" }}{{ with .title }}<h2>{{ . }}</h2>{{ end }}<figure class="wide-image"><img loading="lazy" src="{{ .image | partial "url.html" }}" alt="{{ .alt }}"><figcaption>{{ .caption }}</figcaption></figure>
+{{ else if eq .type "cards" }}<div class="section-heading"><h2>{{ .title }}</h2>{{ with .text }}<p>{{ . }}</p>{{ end }}</div><div class="card-grid cols-{{ .columns | default "3" }}">{{ range $i,$item := .items }}<a class="topic-card" href="{{ $item.url | partial "url.html" }}"><span class="card-number">{{ printf "%02d" (add $i 1) }} /</span><h3>{{ $item.title }} <span>↗</span></h3><p>{{ $item.text }}</p></a>{{ end }}</div>
+{{ else if eq .type "gallery" }}<div class="section-heading"><h2>{{ .title }}</h2></div><div class="gallery cols-{{ .columns | default "2" }}">{{ range .items }}<figure><img loading="lazy" src="{{ .image | partial "url.html" }}" alt="{{ .caption }}"><figcaption>{{ .caption }}</figcaption></figure>{{ end }}</div>
+{{ else if eq .type "posts" }}<div class="section-heading split"><div><p class="eyebrow">LATEST NOTES</p><h2>{{ .title }}</h2><p>{{ .text }}</p></div><a class="text-link" href="{{ "posts/" | partial "url.html" }}">全部文章 ↗</a></div><div class="post-grid">{{ range first (int (.count | default 6)) (where site.RegularPages "Section" "posts") }}{{ partial "post-card.html" . }}{{ end }}</div>
+{{ else if eq .type "callout" }}<div class="callout"><span class="spark">✳</span><h2>{{ .title }}</h2><p>{{ .text }}</p>{{ if and .button .url }}<a class="button" href="{{ .url | partial "url.html" }}">{{ .button }} ↗</a>{{ end }}</div>
+{{ else if eq .type "video" }}<h2>{{ .title }}</h2><video controls preload="metadata" {{ with .poster }}poster="{{ . | partial "url.html" }}"{{ end }} src="{{ .url | partial "url.html" }}">浏览器不支持视频播放，请<a href="{{ .url | partial "url.html" }}">打开视频</a>。</video><p class="muted">{{ .caption }}</p>
+{{ else if eq .type "spacer" }}<div class="spacer spacer-{{ .size | default "small" }}" aria-hidden="true"></div>
+{{ end }}
+</section>{{ end }}{{ end }}

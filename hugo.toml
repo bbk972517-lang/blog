@@ -1,0 +1,13 @@
+baseURL = 'https://bbk972517-lang.github.io/blog/'
+locale = 'zh-CN'
+title = '拾光'
+timeZone = 'Asia/Shanghai'
+enableRobotsTXT = true
+buildFuture = false
+[permalinks]
+  posts = '/posts/:slug/'
+  pages = '/:slug/'
+[taxonomies]
+  tag = 'tags'
+[markup.goldmark.renderer]
+  unsafe = false
