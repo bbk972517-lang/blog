@@ -5,7 +5,7 @@ Hugo + Decap CMS + GitHub Pages。网站不带广告、不使用统计追踪、�
 ## 当前交付状态
 
 模板已准备；正式发布还需要你的 GitHub 仓库和一次性 OAuth 登录设置。未接通前，不代表已有线上网址。
-默认使用 bbk972517-lang/blog 仓库（项目站点 /blog/）。如果更换账户，配置也需要对应更新。
+默认使用 Eurynn/blog 仓库（项目站点 /blog/）。如果更换账户，配置也需要对应更新。
 
 ## 平时怎样 DIY（不改代码）
 
@@ -25,7 +25,7 @@ Hugo + Decap CMS + GitHub Pages。网站不带广告、不使用统计追踪、�
 
 ### 1. 建仓库
 
-在 https://github.com/new 创建公开仓库 **blog**，默认分支 main。
+当前公开仓库是 **Eurynn/blog**，默认分支 main。
 将本项目的全部源文件上传到仓库根目录，包括 .github/workflows/pages.yml，别套一层 site 文件夹。
 不要上传 D 盘的 tools、cache、downloads、temp、preview，它们不是网站源码。
 图形化上传可能漏掉隐藏文件夹，建议由协作者通过 Git 提交完整项目。
@@ -34,7 +34,7 @@ Hugo + Decap CMS + GitHub Pages。网站不带广告、不使用统计追踪、�
 
 仓库 Settings → Pages → Build and deployment → Source 选 **GitHub Actions**。
 在 Actions 页面手动运行“发布博客到 GitHub Pages”，等待成功。
-网址为 https://bbk972517-lang.github.io/blog/ 。
+网址为 https://eurynn.github.io/blog/ 。
 
 ### 3. 设置后台登录（不是 Git Gateway）
 
@@ -85,3 +85,4 @@ Netlify 只是可替换的登录中介；它故障时文章页面仍可访问，
 - 页面模块：https://decapcms.org/docs/variable-type-widgets/
 - OAuth：https://docs.netlify.com/manage/security/secure-access-to-sites/oauth-provider-tokens/
 - GitHub Pages：https://docs.github.com/en/pages
+
