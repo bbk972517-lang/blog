@@ -6,6 +6,7 @@
   const img = (src, alt, getAsset) => h("img", {src: src ? assetURL(getAsset(src)) : "", alt: alt || ""});
   CMS.registerPreviewStyle(location.pathname.replace(/admin\/.*$/, "css/style.css"));
   CMS.registerPreviewStyle(location.pathname.replace(/admin\/.*$/, "css/enhancements.css"));
+  CMS.registerPreviewStyle(location.pathname.replace(/admin\/.*$/, "css/millennium.css"));
   function renderBlock(b, i, getAsset) {
     if (b.enabled === false) return null;
     let content;
@@ -51,4 +52,3 @@
       h("p",null,(d.navigation||[]).map(n=>n.label).join(" · ")),h("p",null,d.footer),h("p",null,(d.footer_links||[]).map(n=>n.label).join(" · ")));
   });
 })();
-
