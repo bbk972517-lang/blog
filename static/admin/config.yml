@@ -1,7 +1,7 @@
 {
   "backend": {
     "name": "github",
-    "repo": "bbk972517-lang/blog",
+    "repo": "Eurynn/blog",
     "branch": "main",
     "base_url": "https://api.netlify.com",
     "auth_endpoint": "auth",
@@ -14,8 +14,8 @@
   "locale": "zh_Hans",
   "media_folder": "static/images/uploads",
   "public_folder": "/blog/images/uploads",
-  "site_url": "https://bbk972517-lang.github.io/blog",
-  "display_url": "https://bbk972517-lang.github.io/blog",
+  "site_url": "https://eurynn.github.io/blog",
+  "display_url": "https://eurynn.github.io/blog",
   "logo_url": "../images/favicon.svg",
   "show_preview_links": false,
   "slug": {
@@ -993,3 +993,4 @@
     }
   ]
 }
+
