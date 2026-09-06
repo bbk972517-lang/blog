@@ -19,6 +19,9 @@ blocks:
       - title: 探索
         text: 为新的爱好和小项目留出空间。
         url: /
+      - title: 模块示例
+        text: 看看图文、引用、时间线、数字和问答怎样组合。
+        url: /module-playground/
   - type: gallery
     title: 一点视觉灵感
     columns: "2"
@@ -31,3 +34,4 @@ blocks:
     title: 把这一页变成你自己的。
     text: 在后台打开「个性化页面」，你可以添加模块、调整顺序，也可以创建新的作品集或旅行页。
 ---
+

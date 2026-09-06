@@ -5,6 +5,7 @@
   const assetURL = value => { const u=String(value); const base=location.pathname.replace(/admin\/.*$/, ""); return u.startsWith("/") && !u.startsWith(base) ? base+u.replace(/^\//, "") : u; };
   const img = (src, alt, getAsset) => h("img", {src: src ? assetURL(getAsset(src)) : "", alt: alt || ""});
   CMS.registerPreviewStyle(location.pathname.replace(/admin\/.*$/, "css/style.css"));
+  CMS.registerPreviewStyle(location.pathname.replace(/admin\/.*$/, "css/enhancements.css"));
   function renderBlock(b, i, getAsset) {
     if (b.enabled === false) return null;
     let content;
@@ -19,10 +20,15 @@
       case "posts": content = [heading,h("div",{className:"callout",key:"posts"},"发布后自动显示最新 "+(b.count||6)+" 篇文章。")]; break;
       case "callout": content = h("div",{className:"callout"},h("span",{className:"spark"},"✳"),h("h2",null,b.title),h("p",null,b.text),button); break;
       case "video": content = [heading,h("video",{controls:true,src:safe(b.url),poster:b.poster?assetURL(getAsset(b.poster)):undefined,key:"video"}),h("p",{key:"caption"},b.caption)]; break;
+      case "split": content = h("div",{className:"split-feature image-"+(b.image_position||"left")},h("figure",null,img(b.image,b.alt,getAsset)),h("div",{className:"split-copy"},b.eyebrow&&h("p",{className:"eyebrow"},b.eyebrow),h("h2",null,b.title),h("div",{className:"split-body",style:{whiteSpace:"pre-wrap"}},b.body),button)); break;
+      case "quote": content = h("blockquote",{className:"editorial-quote"},h("span",{"aria-hidden":true},"“"),h("p",null,b.quote),b.source&&h("cite",null,"— "+b.source)); break;
+      case "timeline": content = [heading,h("ol",{className:"timeline",key:"timeline"},(b.items||[]).map((item,j)=>h("li",{key:j},h("span",null,item.date),h("div",null,h("h3",null,item.title),h("p",null,item.text)))))]; break;
+      case "facts": content = [heading,h("div",{className:"facts-grid",key:"facts"},(b.items||[]).map((item,j)=>h("div",{key:j},h("strong",null,item.value),h("span",null,item.label))))]; break;
+      case "faq": content = [heading,h("div",{className:"faq-list",key:"faq"},(b.items||[]).map((item,j)=>h("details",{key:j,open:j===0},h("summary",null,item.question),h("div",{style:{whiteSpace:"pre-wrap"}},item.answer))))]; break;
       case "spacer": content = h("div",{className:"spacer spacer-"+(b.size||"small")}); break;
       default: content = h("p",null,"请选择模块类型");
     }
-    return h("section",{className:"section block-"+b.type,key:i},content);
+    return h("section",{className:"section block-"+b.type+" tone-"+(b.tone||"plain"),id:b.anchor||undefined,key:i},content);
   }
   function PagePreview(props) {
     const d = props.entry.get("data").toJS();
@@ -40,8 +46,9 @@
   });
   CMS.registerPreviewTemplate("settings",props => {
     const d=props.entry.get("data").toJS();
-    return h("div",{className:"wrap",style:{"--accent":d.accent,"--paper":d.background,background:d.background,padding:"30px"}},
-      h("h1",null,d.title),h("p",null,d.tagline),h("div",{className:"callout"},h("h2",null,"主题色预览"),h("a",{className:"button"},"示例按钮 ↗")),
-      h("p",null,(d.navigation||[]).map(n=>n.label).join(" · ")),h("p",null,d.footer));
+    return h("div",{className:"wrap font-"+(d.font_style||"serif")+" corners-"+(d.corners||"soft"),style:{"--accent":d.accent,"--paper":d.background,background:d.background,padding:"30px"}},
+      h("h1",null,(d.mark||"")+"  "+d.title),h("p",null,d.tagline),h("div",{className:"callout"},h("h2",null,"主题与边角预览"),h("a",{className:"button"},"示例按钮 ↗")),
+      h("p",null,(d.navigation||[]).map(n=>n.label).join(" · ")),h("p",null,d.footer),h("p",null,(d.footer_links||[]).map(n=>n.label).join(" · ")));
   });
 })();
+

@@ -1,0 +1,24 @@
+{{- $description := .Description | default hugo.Data.settings.description -}}
+{{- $pageTitle := hugo.Data.settings.title -}}
+{{- if not .IsHome }}{{ $pageTitle = printf "%s · %s" .Title hugo.Data.settings.title }}{{ end -}}
+<meta name="theme-color" content="{{ hugo.Data.settings.accent | default "#315c49" }}">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+{{ with hugo.Data.settings.author }}<meta name="author" content="{{ . }}">{{ end }}
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="{{ hugo.Data.settings.title }}">
+<meta property="og:title" content="{{ $pageTitle }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:type" content="{{ if eq .Section "posts" }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{- $image := .Params.cover | default hugo.Data.settings.share_image -}}
+{{ with $image }}{{ $imageURL := partial "url.html" . | absURL }}<meta property="og:image" content="{{ $imageURL }}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{{ $imageURL }}">{{ end }}
+<meta name="twitter:title" content="{{ $pageTitle }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{- $schema := dict "@context" "https://schema.org" "@type" "WebSite" "name" hugo.Data.settings.title "description" hugo.Data.settings.description "inLanguage" "zh-CN" "url" site.Home.Permalink -}}
+{{- if eq .Section "posts" -}}
+  {{- $schema = dict "@context" "https://schema.org" "@type" "BlogPosting" "headline" .Title "description" $description "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00") "inLanguage" "zh-CN" "mainEntityOfPage" .Permalink -}}
+  {{- with hugo.Data.settings.author }}{{ $schema = merge $schema (dict "author" (dict "@type" "Person" "name" .)) }}{{ end -}}
+  {{- with $image }}{{ $schema = merge $schema (dict "image" (partial "url.html" . | absURL)) }}{{ end -}}
+{{- end -}}
+<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+

@@ -1,0 +1,21 @@
+name: 每周内容备份
+on:
+  schedule:
+    - cron: "23 2 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: 打包可迁移内容
+        run: tar -czf blog-content-backup.tar.gz content data static/images hugo.toml
+      - name: 保存 90 天
+        uses: actions/upload-artifact@v4
+        with:
+          name: blog-content-${{ github.run_id }}
+          path: blog-content-backup.tar.gz
+          retention-days: 90
+

@@ -57,6 +57,37 @@
                       "required": false
                     },
                     {
+                      "label": "页内定位名（可选）",
+                      "name": "anchor",
+                      "widget": "string",
+                      "required": false,
+                      "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                      "pattern": [
+                        "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                        "请填写小写英文、数字或短横线"
+                      ]
+                    },
+                    {
+                      "label": "背景风格",
+                      "name": "tone",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "普通",
+                          "value": "plain"
+                        },
+                        {
+                          "label": "浅色块",
+                          "value": "tint"
+                        },
+                        {
+                          "label": "主题色深底",
+                          "value": "dark"
+                        }
+                      ],
+                      "default": "plain"
+                    },
+                    {
                       "label": "大标题（可换行）",
                       "name": "title",
                       "widget": "text"
@@ -110,6 +141,37 @@
                       "required": false
                     },
                     {
+                      "label": "页内定位名（可选）",
+                      "name": "anchor",
+                      "widget": "string",
+                      "required": false,
+                      "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                      "pattern": [
+                        "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                        "请填写小写英文、数字或短横线"
+                      ]
+                    },
+                    {
+                      "label": "背景风格",
+                      "name": "tone",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "普通",
+                          "value": "plain"
+                        },
+                        {
+                          "label": "浅色块",
+                          "value": "tint"
+                        },
+                        {
+                          "label": "主题色深底",
+                          "value": "dark"
+                        }
+                      ],
+                      "default": "plain"
+                    },
+                    {
                       "label": "模块标题",
                       "name": "title",
                       "widget": "string"
@@ -132,6 +194,37 @@
                       "widget": "boolean",
                       "default": true,
                       "required": false
+                    },
+                    {
+                      "label": "页内定位名（可选）",
+                      "name": "anchor",
+                      "widget": "string",
+                      "required": false,
+                      "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                      "pattern": [
+                        "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                        "请填写小写英文、数字或短横线"
+                      ]
+                    },
+                    {
+                      "label": "背景风格",
+                      "name": "tone",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "普通",
+                          "value": "plain"
+                        },
+                        {
+                          "label": "浅色块",
+                          "value": "tint"
+                        },
+                        {
+                          "label": "主题色深底",
+                          "value": "dark"
+                        }
+                      ],
+                      "default": "plain"
                     },
                     {
                       "label": "模块标题",
@@ -168,6 +261,37 @@
                       "widget": "boolean",
                       "default": true,
                       "required": false
+                    },
+                    {
+                      "label": "页内定位名（可选）",
+                      "name": "anchor",
+                      "widget": "string",
+                      "required": false,
+                      "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                      "pattern": [
+                        "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                        "请填写小写英文、数字或短横线"
+                      ]
+                    },
+                    {
+                      "label": "背景风格",
+                      "name": "tone",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "普通",
+                          "value": "plain"
+                        },
+                        {
+                          "label": "浅色块",
+                          "value": "tint"
+                        },
+                        {
+                          "label": "主题色深底",
+                          "value": "dark"
+                        }
+                      ],
+                      "default": "plain"
                     },
                     {
                       "label": "模块标题",
@@ -233,6 +357,37 @@
                       "required": false
                     },
                     {
+                      "label": "页内定位名（可选）",
+                      "name": "anchor",
+                      "widget": "string",
+                      "required": false,
+                      "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                      "pattern": [
+                        "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                        "请填写小写英文、数字或短横线"
+                      ]
+                    },
+                    {
+                      "label": "背景风格",
+                      "name": "tone",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "普通",
+                          "value": "plain"
+                        },
+                        {
+                          "label": "浅色块",
+                          "value": "tint"
+                        },
+                        {
+                          "label": "主题色深底",
+                          "value": "dark"
+                        }
+                      ],
+                      "default": "plain"
+                    },
+                    {
                       "label": "模块标题",
                       "name": "title",
                       "widget": "string"
@@ -279,6 +434,37 @@
                       "required": false
                     },
                     {
+                      "label": "页内定位名（可选）",
+                      "name": "anchor",
+                      "widget": "string",
+                      "required": false,
+                      "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                      "pattern": [
+                        "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                        "请填写小写英文、数字或短横线"
+                      ]
+                    },
+                    {
+                      "label": "背景风格",
+                      "name": "tone",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "普通",
+                          "value": "plain"
+                        },
+                        {
+                          "label": "浅色块",
+                          "value": "tint"
+                        },
+                        {
+                          "label": "主题色深底",
+                          "value": "dark"
+                        }
+                      ],
+                      "default": "plain"
+                    },
+                    {
                       "label": "模块标题",
                       "name": "title",
                       "widget": "string"
@@ -311,6 +497,37 @@
                       "widget": "boolean",
                       "default": true,
                       "required": false
+                    },
+                    {
+                      "label": "页内定位名（可选）",
+                      "name": "anchor",
+                      "widget": "string",
+                      "required": false,
+                      "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                      "pattern": [
+                        "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                        "请填写小写英文、数字或短横线"
+                      ]
+                    },
+                    {
+                      "label": "背景风格",
+                      "name": "tone",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "普通",
+                          "value": "plain"
+                        },
+                        {
+                          "label": "浅色块",
+                          "value": "tint"
+                        },
+                        {
+                          "label": "主题色深底",
+                          "value": "dark"
+                        }
+                      ],
+                      "default": "plain"
                     },
                     {
                       "label": "模块标题",
@@ -352,6 +569,37 @@
                       "widget": "boolean",
                       "default": true,
                       "required": false
+                    },
+                    {
+                      "label": "页内定位名（可选）",
+                      "name": "anchor",
+                      "widget": "string",
+                      "required": false,
+                      "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                      "pattern": [
+                        "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                        "请填写小写英文、数字或短横线"
+                      ]
+                    },
+                    {
+                      "label": "背景风格",
+                      "name": "tone",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "普通",
+                          "value": "plain"
+                        },
+                        {
+                          "label": "浅色块",
+                          "value": "tint"
+                        },
+                        {
+                          "label": "主题色深底",
+                          "value": "dark"
+                        }
+                      ],
+                      "default": "plain"
                     },
                     {
                       "label": "模块标题",
@@ -411,11 +659,400 @@
                       "default": "small"
                     }
                   ]
+                },
+                {
+                  "label": "图文双栏",
+                  "name": "split",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "label": "显示这个模块",
+                      "name": "enabled",
+                      "widget": "boolean",
+                      "default": true,
+                      "required": false
+                    },
+                    {
+                      "label": "页内定位名（可选）",
+                      "name": "anchor",
+                      "widget": "string",
+                      "required": false,
+                      "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                      "pattern": [
+                        "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                        "请填写小写英文、数字或短横线"
+                      ]
+                    },
+                    {
+                      "label": "背景风格",
+                      "name": "tone",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "普通",
+                          "value": "plain"
+                        },
+                        {
+                          "label": "浅色块",
+                          "value": "tint"
+                        },
+                        {
+                          "label": "主题色深底",
+                          "value": "dark"
+                        }
+                      ],
+                      "default": "plain"
+                    },
+                    {
+                      "label": "顶部小字",
+                      "name": "eyebrow",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "模块标题",
+                      "name": "title",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "正文",
+                      "name": "body",
+                      "widget": "markdown"
+                    },
+                    {
+                      "label": "图片",
+                      "name": "image",
+                      "widget": "image"
+                    },
+                    {
+                      "label": "图片描述（无障碍）",
+                      "name": "alt",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "图片位置",
+                      "name": "image_position",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "左侧",
+                          "value": "left"
+                        },
+                        {
+                          "label": "右侧",
+                          "value": "right"
+                        }
+                      ],
+                      "default": "left"
+                    },
+                    {
+                      "label": "按钮文字",
+                      "name": "button",
+                      "widget": "string",
+                      "required": false
+                    },
+                    {
+                      "label": "链接地址",
+                      "name": "url",
+                      "widget": "string",
+                      "required": false,
+                      "hint": "站内填写 /about/ 或 /posts/；站外填写完整 https:// 地址。",
+                      "pattern": [
+                        "^(https://|/)[^\\s]*$",
+                        "请填写 / 开头的站内路径或 https:// 链接"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "大字引用",
+                  "name": "quote",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "label": "显示这个模块",
+                      "name": "enabled",
+                      "widget": "boolean",
+                      "default": true,
+                      "required": false
+                    },
+                    {
+                      "label": "页内定位名（可选）",
+                      "name": "anchor",
+                      "widget": "string",
+                      "required": false,
+                      "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                      "pattern": [
+                        "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                        "请填写小写英文、数字或短横线"
+                      ]
+                    },
+                    {
+                      "label": "背景风格",
+                      "name": "tone",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "普通",
+                          "value": "plain"
+                        },
+                        {
+                          "label": "浅色块",
+                          "value": "tint"
+                        },
+                        {
+                          "label": "主题色深底",
+                          "value": "dark"
+                        }
+                      ],
+                      "default": "plain"
+                    },
+                    {
+                      "label": "引用内容",
+                      "name": "quote",
+                      "widget": "text"
+                    },
+                    {
+                      "label": "来源或署名",
+                      "name": "source",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ]
+                },
+                {
+                  "label": "时间线 / 经历",
+                  "name": "timeline",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "label": "显示这个模块",
+                      "name": "enabled",
+                      "widget": "boolean",
+                      "default": true,
+                      "required": false
+                    },
+                    {
+                      "label": "页内定位名（可选）",
+                      "name": "anchor",
+                      "widget": "string",
+                      "required": false,
+                      "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                      "pattern": [
+                        "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                        "请填写小写英文、数字或短横线"
+                      ]
+                    },
+                    {
+                      "label": "背景风格",
+                      "name": "tone",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "普通",
+                          "value": "plain"
+                        },
+                        {
+                          "label": "浅色块",
+                          "value": "tint"
+                        },
+                        {
+                          "label": "主题色深底",
+                          "value": "dark"
+                        }
+                      ],
+                      "default": "plain"
+                    },
+                    {
+                      "label": "模块标题",
+                      "name": "title",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "简短说明",
+                      "name": "text",
+                      "widget": "text",
+                      "required": false
+                    },
+                    {
+                      "label": "节点（可排序）",
+                      "name": "items",
+                      "widget": "list",
+                      "summary": "{{fields.date}} · {{fields.title}}",
+                      "fields": [
+                        {
+                          "label": "时间",
+                          "name": "date",
+                          "widget": "string",
+                          "hint": "例如 2026、春天、现在"
+                        },
+                        {
+                          "label": "节点标题",
+                          "name": "title",
+                          "widget": "string"
+                        },
+                        {
+                          "label": "说明",
+                          "name": "text",
+                          "widget": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "数字 / 亮点",
+                  "name": "facts",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "label": "显示这个模块",
+                      "name": "enabled",
+                      "widget": "boolean",
+                      "default": true,
+                      "required": false
+                    },
+                    {
+                      "label": "页内定位名（可选）",
+                      "name": "anchor",
+                      "widget": "string",
+                      "required": false,
+                      "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                      "pattern": [
+                        "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                        "请填写小写英文、数字或短横线"
+                      ]
+                    },
+                    {
+                      "label": "背景风格",
+                      "name": "tone",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "普通",
+                          "value": "plain"
+                        },
+                        {
+                          "label": "浅色块",
+                          "value": "tint"
+                        },
+                        {
+                          "label": "主题色深底",
+                          "value": "dark"
+                        }
+                      ],
+                      "default": "plain"
+                    },
+                    {
+                      "label": "模块标题",
+                      "name": "title",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "简短说明",
+                      "name": "text",
+                      "widget": "text",
+                      "required": false
+                    },
+                    {
+                      "label": "数字或亮点（可排序）",
+                      "name": "items",
+                      "widget": "list",
+                      "summary": "{{fields.value}} · {{fields.label}}",
+                      "fields": [
+                        {
+                          "label": "醒目内容",
+                          "name": "value",
+                          "widget": "string",
+                          "hint": "可以是 26、12 城、∞"
+                        },
+                        {
+                          "label": "说明",
+                          "name": "label",
+                          "widget": "string"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "折叠问答",
+                  "name": "faq",
+                  "widget": "object",
+                  "fields": [
+                    {
+                      "label": "显示这个模块",
+                      "name": "enabled",
+                      "widget": "boolean",
+                      "default": true,
+                      "required": false
+                    },
+                    {
+                      "label": "页内定位名（可选）",
+                      "name": "anchor",
+                      "widget": "string",
+                      "required": false,
+                      "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                      "pattern": [
+                        "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                        "请填写小写英文、数字或短横线"
+                      ]
+                    },
+                    {
+                      "label": "背景风格",
+                      "name": "tone",
+                      "widget": "select",
+                      "options": [
+                        {
+                          "label": "普通",
+                          "value": "plain"
+                        },
+                        {
+                          "label": "浅色块",
+                          "value": "tint"
+                        },
+                        {
+                          "label": "主题色深底",
+                          "value": "dark"
+                        }
+                      ],
+                      "default": "plain"
+                    },
+                    {
+                      "label": "模块标题",
+                      "name": "title",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "简短说明",
+                      "name": "text",
+                      "widget": "text",
+                      "required": false
+                    },
+                    {
+                      "label": "问答（可排序）",
+                      "name": "items",
+                      "widget": "list",
+                      "summary": "{{fields.question}}",
+                      "fields": [
+                        {
+                          "label": "问题",
+                          "name": "question",
+                          "widget": "string"
+                        },
+                        {
+                          "label": "回答",
+                          "name": "answer",
+                          "widget": "markdown"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ],
               "summary": "{{fields.title}} · {{fields.type}}",
               "collapsed": true,
-              "hint": "可以自由添加、删除、排序；关闭「显示这个模块」可临时隐藏。预览为布局近似效果，最终以网站为准。"
+              "hint": "添加、删除或拖动排序；每个模块可设置普通、浅色或深色背景。填写页内定位名后，菜单可以直接跳到这一段。"
             }
           ]
         }
@@ -466,6 +1103,37 @@
                   "widget": "boolean",
                   "default": true,
                   "required": false
+                },
+                {
+                  "label": "页内定位名（可选）",
+                  "name": "anchor",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                  "pattern": [
+                    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                    "请填写小写英文、数字或短横线"
+                  ]
+                },
+                {
+                  "label": "背景风格",
+                  "name": "tone",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "普通",
+                      "value": "plain"
+                    },
+                    {
+                      "label": "浅色块",
+                      "value": "tint"
+                    },
+                    {
+                      "label": "主题色深底",
+                      "value": "dark"
+                    }
+                  ],
+                  "default": "plain"
                 },
                 {
                   "label": "大标题（可换行）",
@@ -521,6 +1189,37 @@
                   "required": false
                 },
                 {
+                  "label": "页内定位名（可选）",
+                  "name": "anchor",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                  "pattern": [
+                    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                    "请填写小写英文、数字或短横线"
+                  ]
+                },
+                {
+                  "label": "背景风格",
+                  "name": "tone",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "普通",
+                      "value": "plain"
+                    },
+                    {
+                      "label": "浅色块",
+                      "value": "tint"
+                    },
+                    {
+                      "label": "主题色深底",
+                      "value": "dark"
+                    }
+                  ],
+                  "default": "plain"
+                },
+                {
                   "label": "模块标题",
                   "name": "title",
                   "widget": "string"
@@ -543,6 +1242,37 @@
                   "widget": "boolean",
                   "default": true,
                   "required": false
+                },
+                {
+                  "label": "页内定位名（可选）",
+                  "name": "anchor",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                  "pattern": [
+                    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                    "请填写小写英文、数字或短横线"
+                  ]
+                },
+                {
+                  "label": "背景风格",
+                  "name": "tone",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "普通",
+                      "value": "plain"
+                    },
+                    {
+                      "label": "浅色块",
+                      "value": "tint"
+                    },
+                    {
+                      "label": "主题色深底",
+                      "value": "dark"
+                    }
+                  ],
+                  "default": "plain"
                 },
                 {
                   "label": "模块标题",
@@ -579,6 +1309,37 @@
                   "widget": "boolean",
                   "default": true,
                   "required": false
+                },
+                {
+                  "label": "页内定位名（可选）",
+                  "name": "anchor",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                  "pattern": [
+                    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                    "请填写小写英文、数字或短横线"
+                  ]
+                },
+                {
+                  "label": "背景风格",
+                  "name": "tone",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "普通",
+                      "value": "plain"
+                    },
+                    {
+                      "label": "浅色块",
+                      "value": "tint"
+                    },
+                    {
+                      "label": "主题色深底",
+                      "value": "dark"
+                    }
+                  ],
+                  "default": "plain"
                 },
                 {
                   "label": "模块标题",
@@ -644,6 +1405,37 @@
                   "required": false
                 },
                 {
+                  "label": "页内定位名（可选）",
+                  "name": "anchor",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                  "pattern": [
+                    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                    "请填写小写英文、数字或短横线"
+                  ]
+                },
+                {
+                  "label": "背景风格",
+                  "name": "tone",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "普通",
+                      "value": "plain"
+                    },
+                    {
+                      "label": "浅色块",
+                      "value": "tint"
+                    },
+                    {
+                      "label": "主题色深底",
+                      "value": "dark"
+                    }
+                  ],
+                  "default": "plain"
+                },
+                {
                   "label": "模块标题",
                   "name": "title",
                   "widget": "string"
@@ -690,6 +1482,37 @@
                   "required": false
                 },
                 {
+                  "label": "页内定位名（可选）",
+                  "name": "anchor",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                  "pattern": [
+                    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                    "请填写小写英文、数字或短横线"
+                  ]
+                },
+                {
+                  "label": "背景风格",
+                  "name": "tone",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "普通",
+                      "value": "plain"
+                    },
+                    {
+                      "label": "浅色块",
+                      "value": "tint"
+                    },
+                    {
+                      "label": "主题色深底",
+                      "value": "dark"
+                    }
+                  ],
+                  "default": "plain"
+                },
+                {
                   "label": "模块标题",
                   "name": "title",
                   "widget": "string"
@@ -722,6 +1545,37 @@
                   "widget": "boolean",
                   "default": true,
                   "required": false
+                },
+                {
+                  "label": "页内定位名（可选）",
+                  "name": "anchor",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                  "pattern": [
+                    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                    "请填写小写英文、数字或短横线"
+                  ]
+                },
+                {
+                  "label": "背景风格",
+                  "name": "tone",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "普通",
+                      "value": "plain"
+                    },
+                    {
+                      "label": "浅色块",
+                      "value": "tint"
+                    },
+                    {
+                      "label": "主题色深底",
+                      "value": "dark"
+                    }
+                  ],
+                  "default": "plain"
                 },
                 {
                   "label": "模块标题",
@@ -763,6 +1617,37 @@
                   "widget": "boolean",
                   "default": true,
                   "required": false
+                },
+                {
+                  "label": "页内定位名（可选）",
+                  "name": "anchor",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                  "pattern": [
+                    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                    "请填写小写英文、数字或短横线"
+                  ]
+                },
+                {
+                  "label": "背景风格",
+                  "name": "tone",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "普通",
+                      "value": "plain"
+                    },
+                    {
+                      "label": "浅色块",
+                      "value": "tint"
+                    },
+                    {
+                      "label": "主题色深底",
+                      "value": "dark"
+                    }
+                  ],
+                  "default": "plain"
                 },
                 {
                   "label": "模块标题",
@@ -822,11 +1707,400 @@
                   "default": "small"
                 }
               ]
+            },
+            {
+              "label": "图文双栏",
+              "name": "split",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "显示这个模块",
+                  "name": "enabled",
+                  "widget": "boolean",
+                  "default": true,
+                  "required": false
+                },
+                {
+                  "label": "页内定位名（可选）",
+                  "name": "anchor",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                  "pattern": [
+                    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                    "请填写小写英文、数字或短横线"
+                  ]
+                },
+                {
+                  "label": "背景风格",
+                  "name": "tone",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "普通",
+                      "value": "plain"
+                    },
+                    {
+                      "label": "浅色块",
+                      "value": "tint"
+                    },
+                    {
+                      "label": "主题色深底",
+                      "value": "dark"
+                    }
+                  ],
+                  "default": "plain"
+                },
+                {
+                  "label": "顶部小字",
+                  "name": "eyebrow",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "模块标题",
+                  "name": "title",
+                  "widget": "string"
+                },
+                {
+                  "label": "正文",
+                  "name": "body",
+                  "widget": "markdown"
+                },
+                {
+                  "label": "图片",
+                  "name": "image",
+                  "widget": "image"
+                },
+                {
+                  "label": "图片描述（无障碍）",
+                  "name": "alt",
+                  "widget": "string"
+                },
+                {
+                  "label": "图片位置",
+                  "name": "image_position",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "左侧",
+                      "value": "left"
+                    },
+                    {
+                      "label": "右侧",
+                      "value": "right"
+                    }
+                  ],
+                  "default": "left"
+                },
+                {
+                  "label": "按钮文字",
+                  "name": "button",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "label": "链接地址",
+                  "name": "url",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "站内填写 /about/ 或 /posts/；站外填写完整 https:// 地址。",
+                  "pattern": [
+                    "^(https://|/)[^\\s]*$",
+                    "请填写 / 开头的站内路径或 https:// 链接"
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "大字引用",
+              "name": "quote",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "显示这个模块",
+                  "name": "enabled",
+                  "widget": "boolean",
+                  "default": true,
+                  "required": false
+                },
+                {
+                  "label": "页内定位名（可选）",
+                  "name": "anchor",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                  "pattern": [
+                    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                    "请填写小写英文、数字或短横线"
+                  ]
+                },
+                {
+                  "label": "背景风格",
+                  "name": "tone",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "普通",
+                      "value": "plain"
+                    },
+                    {
+                      "label": "浅色块",
+                      "value": "tint"
+                    },
+                    {
+                      "label": "主题色深底",
+                      "value": "dark"
+                    }
+                  ],
+                  "default": "plain"
+                },
+                {
+                  "label": "引用内容",
+                  "name": "quote",
+                  "widget": "text"
+                },
+                {
+                  "label": "来源或署名",
+                  "name": "source",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "label": "时间线 / 经历",
+              "name": "timeline",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "显示这个模块",
+                  "name": "enabled",
+                  "widget": "boolean",
+                  "default": true,
+                  "required": false
+                },
+                {
+                  "label": "页内定位名（可选）",
+                  "name": "anchor",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                  "pattern": [
+                    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                    "请填写小写英文、数字或短横线"
+                  ]
+                },
+                {
+                  "label": "背景风格",
+                  "name": "tone",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "普通",
+                      "value": "plain"
+                    },
+                    {
+                      "label": "浅色块",
+                      "value": "tint"
+                    },
+                    {
+                      "label": "主题色深底",
+                      "value": "dark"
+                    }
+                  ],
+                  "default": "plain"
+                },
+                {
+                  "label": "模块标题",
+                  "name": "title",
+                  "widget": "string"
+                },
+                {
+                  "label": "简短说明",
+                  "name": "text",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "节点（可排序）",
+                  "name": "items",
+                  "widget": "list",
+                  "summary": "{{fields.date}} · {{fields.title}}",
+                  "fields": [
+                    {
+                      "label": "时间",
+                      "name": "date",
+                      "widget": "string",
+                      "hint": "例如 2026、春天、现在"
+                    },
+                    {
+                      "label": "节点标题",
+                      "name": "title",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "说明",
+                      "name": "text",
+                      "widget": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "数字 / 亮点",
+              "name": "facts",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "显示这个模块",
+                  "name": "enabled",
+                  "widget": "boolean",
+                  "default": true,
+                  "required": false
+                },
+                {
+                  "label": "页内定位名（可选）",
+                  "name": "anchor",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                  "pattern": [
+                    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                    "请填写小写英文、数字或短横线"
+                  ]
+                },
+                {
+                  "label": "背景风格",
+                  "name": "tone",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "普通",
+                      "value": "plain"
+                    },
+                    {
+                      "label": "浅色块",
+                      "value": "tint"
+                    },
+                    {
+                      "label": "主题色深底",
+                      "value": "dark"
+                    }
+                  ],
+                  "default": "plain"
+                },
+                {
+                  "label": "模块标题",
+                  "name": "title",
+                  "widget": "string"
+                },
+                {
+                  "label": "简短说明",
+                  "name": "text",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "数字或亮点（可排序）",
+                  "name": "items",
+                  "widget": "list",
+                  "summary": "{{fields.value}} · {{fields.label}}",
+                  "fields": [
+                    {
+                      "label": "醒目内容",
+                      "name": "value",
+                      "widget": "string",
+                      "hint": "可以是 26、12 城、∞"
+                    },
+                    {
+                      "label": "说明",
+                      "name": "label",
+                      "widget": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "折叠问答",
+              "name": "faq",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "显示这个模块",
+                  "name": "enabled",
+                  "widget": "boolean",
+                  "default": true,
+                  "required": false
+                },
+                {
+                  "label": "页内定位名（可选）",
+                  "name": "anchor",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "用于菜单跳到本页某一段，例如填写 works 后可链接到 /about/#works。只用小写英文、数字和短横线。",
+                  "pattern": [
+                    "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                    "请填写小写英文、数字或短横线"
+                  ]
+                },
+                {
+                  "label": "背景风格",
+                  "name": "tone",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "普通",
+                      "value": "plain"
+                    },
+                    {
+                      "label": "浅色块",
+                      "value": "tint"
+                    },
+                    {
+                      "label": "主题色深底",
+                      "value": "dark"
+                    }
+                  ],
+                  "default": "plain"
+                },
+                {
+                  "label": "模块标题",
+                  "name": "title",
+                  "widget": "string"
+                },
+                {
+                  "label": "简短说明",
+                  "name": "text",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "label": "问答（可排序）",
+                  "name": "items",
+                  "widget": "list",
+                  "summary": "{{fields.question}}",
+                  "fields": [
+                    {
+                      "label": "问题",
+                      "name": "question",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "回答",
+                      "name": "answer",
+                      "widget": "markdown"
+                    }
+                  ]
+                }
+              ]
             }
           ],
           "summary": "{{fields.title}} · {{fields.type}}",
           "collapsed": true,
-          "hint": "可以自由添加、删除、排序；关闭「显示这个模块」可临时隐藏。预览为布局近似效果，最终以网站为准。"
+          "hint": "添加、删除或拖动排序；每个模块可设置普通、浅色或深色背景。填写页内定位名后，菜单可以直接跳到这一段。"
         }
       ]
     },
@@ -910,6 +2184,19 @@
               "widget": "string"
             },
             {
+              "label": "圆形标记文字",
+              "name": "mark",
+              "widget": "string",
+              "hint": "建议填写 1 个汉字或 1–2 个字母。"
+            },
+            {
+              "label": "作者名（可选）",
+              "name": "author",
+              "widget": "string",
+              "required": false,
+              "hint": "用于搜索引擎和文章分享信息。"
+            },
+            {
               "label": "一句话介绍",
               "name": "tagline",
               "widget": "string"
@@ -961,6 +2248,45 @@
               "default": "normal"
             },
             {
+              "label": "标题字体",
+              "name": "font_style",
+              "widget": "select",
+              "options": [
+                {
+                  "label": "文艺衬线",
+                  "value": "serif"
+                },
+                {
+                  "label": "现代无衬线",
+                  "value": "sans"
+                }
+              ],
+              "default": "serif"
+            },
+            {
+              "label": "边角风格",
+              "name": "corners",
+              "widget": "select",
+              "options": [
+                {
+                  "label": "柔和圆角",
+                  "value": "soft"
+                },
+                {
+                  "label": "利落直角",
+                  "value": "square"
+                }
+              ],
+              "default": "soft"
+            },
+            {
+              "label": "分享封面",
+              "name": "share_image",
+              "widget": "image",
+              "required": false,
+              "hint": "文章没有封面时，微信或社交平台分享可使用这张图。建议 1200×630。"
+            },
+            {
               "label": "顶部导航（可排序）",
               "name": "navigation",
               "widget": "list",
@@ -986,6 +2312,37 @@
               "label": "页脚文字",
               "name": "footer",
               "widget": "string"
+            },
+            {
+              "label": "页脚链接（可排序）",
+              "name": "footer_links",
+              "widget": "list",
+              "required": false,
+              "fields": [
+                {
+                  "label": "文字",
+                  "name": "label",
+                  "widget": "string"
+                },
+                {
+                  "label": "链接地址",
+                  "name": "url",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "站内填写 /about/ 或 /posts/；站外填写完整 https:// 地址。",
+                  "pattern": [
+                    "^(https://|/)[^\\s]*$",
+                    "请填写 / 开头的站内路径或 https:// 链接"
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "显示“管理小站”入口",
+              "name": "show_admin_link",
+              "widget": "boolean",
+              "default": true,
+              "hint": "隐藏后仍可手动打开 /admin/。"
             }
           ]
         }

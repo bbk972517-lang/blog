@@ -1,11 +1,18 @@
 {
   "title": "拾光",
+  "mark": "拾",
+  "author": "",
   "tagline": "把日子，写成自己的形状。",
   "description": "一个记录生活、灵感与探索的个人空间。",
   "accent": "#315c49",
   "background": "#f7f5ef",
   "width": "normal",
+  "font_style": "serif",
+  "corners": "soft",
+  "share_image": "/blog/images/share.png",
+  "show_admin_link": true,
   "footer": "慢慢记录，认真生活。",
+  "footer_links": [],
   "navigation": [
     {
       "label": "首页",
@@ -21,3 +28,4 @@
     }
   ]
 }
+

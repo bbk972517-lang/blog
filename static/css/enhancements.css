@@ -1,0 +1,40 @@
+body.font-sans h1,body.font-sans h2{font-family:"Segoe UI","Microsoft YaHei",sans-serif;font-weight:700}
+summary:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+.header nav [aria-current="page"]{color:var(--accent);font-weight:700;border-bottom:1px solid}
+.section{scroll-margin-top:24px}
+.tone-tint,.tone-dark{padding:42px;border-radius:7px}
+.tone-tint{background:#e6ebdf}
+.tone-dark{background:var(--accent);color:#fff}
+.tone-dark p,.tone-dark .muted,.tone-dark cite{color:#ffffffbf}
+.tone-dark .eyebrow,.tone-dark .text-link{color:#fff}
+.tone-dark .button{background:#fff;border-color:#fff;color:var(--accent)}
+.tone-dark .topic-card,.tone-dark details{border-color:#ffffff55;background:#ffffff0d}
+.tone-dark .editorial-quote>span,.tone-dark .timeline li>span,.tone-dark .facts-grid strong,.tone-dark .faq-list summary:after{color:#fff}
+.tone-dark .timeline li,.tone-dark .facts-grid>div,.tone-dark .faq-list{border-color:#ffffff55}
+.split-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:50px;align-items:center}
+.split-feature.image-right figure{order:2}
+.split-feature figure img{width:100%;aspect-ratio:1.18;object-fit:cover;border-radius:6px}
+.split-body p{color:inherit}
+.editorial-quote{max-width:850px;margin:0 auto;text-align:center;border:0}
+.editorial-quote>span{font:72px/.7 Georgia,serif;color:var(--accent)}
+.editorial-quote p{font:clamp(24px,3vw,38px)/1.55 Georgia,"Noto Serif SC",serif;color:inherit;margin:15px 0}
+.editorial-quote cite{font-style:normal;color:var(--muted);font-size:14px}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:grid;grid-template-columns:110px 1fr;gap:28px;padding:22px 0;border-top:1px solid var(--line)}
+.timeline li>span{color:var(--accent);font:italic 17px Georgia,serif}
+.timeline h3{margin:0 0 6px}.timeline p{margin:0}
+.facts-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.facts-grid>div{border-top:1px solid var(--line);padding:22px 4px}
+.facts-grid strong{display:block;color:var(--accent);font:clamp(30px,5vw,52px) Georgia,serif;overflow-wrap:anywhere}
+.facts-grid span{display:block;color:var(--muted);font-size:13px}
+.faq-list{border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line);padding:18px 4px}
+.faq-list summary{cursor:pointer;font-weight:650;list-style:none;padding-right:35px;position:relative}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary:after{content:"＋";position:absolute;right:4px;color:var(--accent)}
+.faq-list details[open] summary:after{content:"−"}
+.faq-list details>div{padding:12px 35px 0 0}.faq-list details p:last-child{margin-bottom:0}
+.corners-square .button,.corners-square .topic-card,.corners-square .callout,.corners-square .hero-art,.corners-square img,.corners-square .tone-tint,.corners-square .tone-dark{border-radius:0}
+@media(max-width:760px){.tone-tint,.tone-dark{padding:28px 20px}.split-feature{grid-template-columns:1fr}.split-feature.image-right figure{order:0}.timeline li{grid-template-columns:75px 1fr;gap:16px}.facts-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media print{.header nav,.footer,.button,.skip{display:none!important}.wrap{width:100%}.article{max-width:none}.section{break-inside:avoid}body{background:#fff;color:#000;font-size:12pt}.prose p,.prose li,p{color:#222}}
+

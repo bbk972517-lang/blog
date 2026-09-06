@@ -30,7 +30,11 @@ jobs:
           curl --fail --location --retry 3 -o static/admin/vendor/decap-cms.js https://unpkg.com/decap-cms@3.16.0/dist/decap-cms.js
           echo 'a5e8564475207ffc6d9d106858890f186dbe6eb392a6c5da854db78ccc00882e  static/admin/vendor/decap-cms.js' | sha256sum --check --strict
       - name: 生成网站
-        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: |
+          hugo --minify --panicOnWarning --baseURL "${{ steps.pages.outputs.base_url }}/"
+          test -s public/index.html
+          test -s public/index.xml
+          test -s public/sitemap.xml
       - uses: actions/upload-pages-artifact@v4
         with:
           path: public
@@ -47,3 +51,4 @@ jobs:
       - name: 上线
         id: deployment
         uses: actions/deploy-pages@v4
+
