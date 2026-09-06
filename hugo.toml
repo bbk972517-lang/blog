@@ -1,4 +1,4 @@
-baseURL = 'https://bbk972517-lang.github.io/blog/'
+baseURL = 'https://eurynn.github.io/blog/'
 locale = 'zh-CN'
 title = '拾光'
 timeZone = 'Asia/Shanghai'
@@ -11,3 +11,4 @@ buildFuture = false
   tag = 'tags'
 [markup.goldmark.renderer]
   unsafe = false
+
