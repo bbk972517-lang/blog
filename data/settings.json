@@ -4,8 +4,8 @@
   "author": "",
   "tagline": "把日子，写成自己的形状。",
   "description": "一个记录生活、灵感与探索的个人空间。",
-  "accent": "#315c49",
-  "background": "#f7f5ef",
+  "accent": "#6657d9",
+  "background": "#dcecf2",
   "width": "normal",
   "font_style": "serif",
   "corners": "soft",
@@ -28,4 +28,3 @@
     }
   ]
 }
-
